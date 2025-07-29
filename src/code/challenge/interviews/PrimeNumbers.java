@@ -1,5 +1,7 @@
 package code.challenge.interviews;
 
+import java.math.BigInteger;
+
 public class PrimeNumbers {
 
     public static void main(String[] args) {
@@ -7,9 +9,34 @@ public class PrimeNumbers {
         int num2 = 49;
         int num3 = 1;
 
+        String number17 = "17";
+        String number49 = "49";
+        String number1 = "1";
+
         System.out.println(num1 + " is prime: " + isPrime(num1)); // Output: 17 is prime: true
         System.out.println(num2 + " is prime: " + isPrime(num2)); // Output: 49 is prime: false
         System.out.println(num3 + " is prime: " + isPrime(num3)); // Output: 1 is prime: false
+
+        System.out.println(number17 + " is prime: " + bigIntegerSolution(number17)); // Output: 17 is prime: true
+        System.out.println(number49 + " is prime: " + bigIntegerSolution(number49)); // Output: 49 is prime: false
+        System.out.println(number1 + " is prime: " + bigIntegerSolution(number1)); // Output: 1 is prime: false
+
+    }
+
+    public static boolean bigIntegerSolution(String n) {
+
+        BigInteger bigInt = new BigInteger(n); // Convert string to BigInteger
+        // Handle the special case of 1, which is not prime
+        if (bigInt.equals(BigInteger.ONE)) {
+           return false;
+        } else {
+            // Use isProbablePrime with a certainty value (e.g., 5)
+            if (bigInt.isProbablePrime(5)) {
+               return true;
+            } else {
+               return false;
+            }
+        }
     }
 
     public static boolean isPrime(int number) {
