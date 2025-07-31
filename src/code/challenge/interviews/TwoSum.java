@@ -1,4 +1,4 @@
-package leet.code;
+package code.challenge.interviews;
 
 import java.util.Arrays;
 import java.util.HashMap;
