@@ -1,4 +1,4 @@
-package leet.code.data.structures.Merge;
+package leet.code.data.structures.MergeTwoSortedList;
 
 public class Main {
     public static void main(String[] args) {

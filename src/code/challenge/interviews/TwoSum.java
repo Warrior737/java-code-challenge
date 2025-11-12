@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSum {
+
     public static void main (String[] args){
 
       int[] arr = new int[] {1,2,3,4,5,6 };
@@ -13,6 +14,11 @@ public class TwoSum {
         System.out.println(Arrays.toString(twoSumBruteForce(target, arr)));
 
         System.out.println(Arrays.toString(twoSum(target, arr)));
+    }
+
+
+    public Map<String, Integer> category(){
+        return new HashMap<>();
     }
 
     private static int[] twoSumBruteForce(int target, int[] arr) {
@@ -38,5 +44,12 @@ public class TwoSum {
             numMap.put(arr[i], i);
         }
         return new int[] {};
+
+
+
+
+
+
+
     }
 }
